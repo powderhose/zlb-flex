@@ -1,0 +1,11 @@
+在使用flex布局的时候,需要给父容器设置属性:display:flex;
+
+flex-direction设定父容器内子元素的排列方向:水平 垂直
+
+flex-wrap设定父容器内子元素换行排列
+
+justify-content设定父容器内子元素与的对齐方式:居中对齐,居右对齐,居左对齐
+
+align-items需要给父容器设定高度和宽度
+
+
