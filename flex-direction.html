@@ -1,0 +1,85 @@
+﻿<!--driver:zhang_luBiao-->
+<!--date:2017/6/23-->
+<!--project:flex-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-direction</title>
+    <style>
+        body,html{
+            width: 100%;
+        }
+        ul,li{
+            padding: 0;
+            margin:0;
+            list-style: none;
+        }
+        ul{
+            /*首先给容器设置flex属性再给父容器添加其他属性*/
+            display: flex;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #03a9f4;
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        .row{
+            flex-direction:row;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        .row_reverse{
+            flex-direction: row-reverse;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .column_reverse{
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul" class="row">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <p>
+        <button type="button" onclick="row()">row主轴水平方向起点在左端</button>
+    </p>
+    <p>
+        <button type="button" onclick="rowReverse()">row-reverse主轴水平方向起点在右端</button>
+    </p>
+    <p>
+        <button type="button" onclick="column()">column主轴垂直方向,起点在上沿</button>
+    </p>
+    <p>
+        <button type="button" onclick="columnReverse()">column-reverse主轴为垂直方向,起点在下沿</button>
+    </p>
+    <script>
+        var ul = document.getElementById('ul');
+        function row(){
+            ul.setAttribute('class', 'row');
+        }
+        function rowReverse(){
+            ul.setAttribute('class', 'row_reverse');
+        }
+        function column(){
+            ul.setAttribute('class', 'column');
+        }
+        function columnReverse(){
+            ul.setAttribute('class', 'column_reverse');
+        }
+    </script>
+</body>
+</html>
